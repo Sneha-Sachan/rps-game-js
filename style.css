@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  background-color: #330c2f;
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.choice {
+  font-size: 10rem;
+  height: 50%;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: #330c2f;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.shake {
+  display: inline-block;
+  animation: shake 0.5s;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 8rem;
+  margin-top: 4rem;
+}
+
+#user,
+#comp {
+  font-size: 4rem;
+}
+
+.msg-container {
+  margin-top: 4rem;
+}
+
+#msg {
+  background-color: #330c2f;
+  color: #fff;
+  font-size: 2rem;
+  display: inline;
+  margin-top: 10rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#rst-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #330c2f;
+  color: #f1faee;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 4rem;
+}
+
+#rst-btn:hover {
+  background-color: #4b1946;
+}
+
+/*animation*/
+@keyframes shakeBtn {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-shake {
+  animation: shakeBtn 0.4s;
+}
+
+@keyframes choiceShake {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  25% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.animate-choice {
+  animation: choiceShake 0.5s;
+}
+
+@keyframes choiceGlow {
+  0% {
+    box-shadow: 0 0 0px #fff;
+  }
+  50% {
+    box-shadow: 0 0 30px #ffcc00;
+  }
+  100% {
+    box-shadow: 0 0 0px #fff;
+  }
+}
+
+.animate-glow {
+  animation: choiceGlow 0.6s;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* start from up */
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(10px); /* ;ittle start with down */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* final position */
+  }
+}
